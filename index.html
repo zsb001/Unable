@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>字符串中字母出现最多次数</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var str="bfkshklsbtlksbjaojfdsasbdskm";
+        var obj={};
+        for(var i=0;i<str.length;i++){
+            if(!obj[str.charAt(i)]){
+                obj[str.charAt(i)]=1
+            }else{
+                obj[str.charAt(i)]++
+            }
+        }
+        console.log(obj)
+        var maxIndex=0;
+        var Zm="";
+        for(var x in obj){
+            if(maxIndex<obj[x]){
+                maxIndex=obj[x];
+                Zm=x;
+            }
+        }
+        console.log(maxIndex,Zm)
+    </script>
+</body>
+</html>
